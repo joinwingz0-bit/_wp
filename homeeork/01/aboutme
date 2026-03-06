@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<title>我的個人網頁</title>
+
+<style>
+body{
+    font-family: Arial;
+    background-color:#e8f0f7;
+    text-align:center;
+}
+
+.container{
+    width:700px;
+    margin:auto;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+}
+
+img{
+    width:150px;
+    border-radius:50%;
+}
+
+h1{
+    color:#003366;
+}
+
+ul{
+    list-style:none;
+    padding:0;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>我的個人網頁</h1>
+
+<img src="https://via.placeholder.com/150">
+
+<h2>基本資料</h2>
+<p>姓名：朱毅勝</p>
+<p>學校：國立金門大學</p>
+<p>科系：資訊工程學系</p>
+
+<h2>自我介紹</h2>
+<p>
+我是國立金門大學資訊工程系學生，
+目前正在學習程式設計、演算法與網站開發。
+希望未來能成為軟體工程師。
+</p>
+
+<h2>興趣</h2>
+<ul>
+<li>程式設計</li>
+</ul>
+
+<h2>聯絡方式</h2>
+<p>Email：joinwingz0@email.com</p>
+
+</div>
+
+</body>
+</html>
