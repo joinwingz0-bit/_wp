@@ -107,7 +107,7 @@ console.log(checkAccess(person)); // 輸出: 允許進入 VIP 廳
 
 ```
 
----
+---x
 
 ### 練習 5：尋找陣列中的最大值（`array`、`for`、`if`）
 
