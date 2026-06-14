@@ -1,0 +1,22 @@
+<%- include('header', { title: post.title }) %>
+<article>
+  <h2><%= post.title %></h2>
+  <p class="meta">
+    作者：<%= post.author %>
+    | 建立：<%= new Date(post.created_at).toLocaleString('zh-TW') %>
+    <% if (post.updated_at !== post.created_at) { %>
+      | 更新：<%= new Date(post.updated_at).toLocaleString('zh-TW') %>
+    <% } %>
+  </p>
+  <div class="content"><%- post.content.replace(/\n/g, '<br>') %></div>
+  <% if (user && user.id === post.author_id) { %>
+  <div class="actions">
+    <a href="/posts/<%= post.id %>/edit">編輯</a>
+    <form action="/posts/<%= post.id %>/delete" method="POST" onsubmit="return confirm('確定刪除？')">
+      <button type="submit">刪除</button>
+    </form>
+  </div>
+  <% } %>
+</article>
+<a href="/posts" class="back">&larr; 回到列表</a>
+<%- include('footer') %>

@@ -1,0 +1,18 @@
+<%- include('header', { title: '文章列表' }) %>
+<h2>文章列表</h2>
+<% if (posts.length === 0) { %>
+  <p class="empty">還沒有任何文章，<a href="/posts/new">寫一篇吧</a>！</p>
+<% } else { %>
+  <ul class="post-list">
+    <% posts.forEach(post => { %>
+      <li>
+        <a href="/posts/<%= post.id %>"><%= post.title %></a>
+        <span class="date">
+          <%= new Date(post.created_at).toLocaleString('zh-TW') %>
+          by <%= post.author %>
+        </span>
+      </li>
+    <% }) %>
+  </ul>
+<% } %>
+<%- include('footer') %>

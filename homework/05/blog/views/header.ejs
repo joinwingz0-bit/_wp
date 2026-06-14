@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= typeof title !== 'undefined' ? title : '簡易網誌' %></title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/">📝 簡易網誌</a></h1>
+    <div class="header-right">
+      <% if (user) { %>
+        <span class="username"><%= user.username %></span>
+        <form action="/auth/logout" method="POST" class="inline-form">
+          <button type="submit">登出</button>
+        </form>
+        <a href="/posts/new">寫新文章</a>
+      <% } else { %>
+        <a href="/auth/login">登入</a>
+        <a href="/auth/register">註冊</a>
+      <% } %>
+    </div>
+  </header>
+  <main>
